@@ -23,7 +23,7 @@ jobs:
                 "destination": "${{ secrets.API_BASE_URL }}/:url*"
               },
               {
-                "source": "/[^.]+",
+                "source": "/(.*)",
                 "destination": "/"
               }
             ]
