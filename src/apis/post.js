@@ -21,6 +21,15 @@ export const getChannelPosts = async (channelId) => {
   }
 };
 
+export const getAllPosts = async () => {
+  try {
+    const data = await baseRequest.get(POSTURL.ALL_POST);
+    return data;
+  } catch (error) {
+    throw new Error(ERROR_MESSAGE_POST.ERROR_POSTDETAIL);
+  }
+};
+
 // post 생성하기
 export const createPost = async (data) => {
   try {
