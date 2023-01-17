@@ -33,7 +33,9 @@ module.exports = {
         filename: '[name].css',
       }),
     new CleanWebpackPlugin(),
-    new Dotenv(),
+    new Dotenv({
+      systemvars: true,
+    }),
   ].filter(Boolean),
   module: {
     rules: [
@@ -50,7 +52,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.jsx?$/i,
+        test: /\.js?$/i,
         exclude: /node_modules/,
         use: [
           {
