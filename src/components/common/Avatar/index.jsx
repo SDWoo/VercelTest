@@ -35,7 +35,6 @@ const Avatar = ({
 
   useEffect(() => {
     const image = new Image();
-    image.src = src;
     image.onload = () => setLoaded(true);
   });
 
