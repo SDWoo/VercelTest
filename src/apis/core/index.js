@@ -2,19 +2,20 @@ import axios from 'axios';
 import { BEARER, TOKEN } from '../../utils/constant/auth';
 import { getStorage } from '../../utils/storage';
 
-const baseURL = `${process.env.REACT_APP_API_ENDPOINT}`;
+const API_BASE_URL =
+  process.env.NODE_ENV === 'development' ? process.env.REACT_APP_API_BASE_URL : '/api';
 
 // 인스턴스 생성
 const baseRequest = axios.create({
-  baseURL,
+  baseURL: API_BASE_URL,
 });
 
 const authRequest = axios.create({
-  baseURL,
+  baseURL: API_BASE_URL,
 });
 
 const postDataRequest = axios.create({
-  baseURL,
+  baseURL: API_BASE_URL,
 });
 
 // 요청에 대한 인터셉터 작성
