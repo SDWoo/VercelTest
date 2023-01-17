@@ -20,6 +20,7 @@ const postDataRequest = axios.create({
 // 요청에 대한 인터셉터 작성
 baseRequest.interceptors.response.use(
   (response) => {
+    console.log(process.env);
     return response;
   },
   (error) => {
