@@ -52,7 +52,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.js?$/i,
+        test: /\.jsx?$/i,
         exclude: /node_modules/,
         use: [
           {
