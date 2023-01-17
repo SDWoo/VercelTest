@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { getChannelPosts, getChannels, getPostDetail } from '../apis/post';
+import { getChannelPosts, getChannels, getPostDetail, getAllPosts } from '../apis/post';
 import { channelState } from '../recoil/channelState';
 import { postDetailModalState, selectedPostState } from '../recoil/postStates';
 import { sleep } from '../utils/sleep';
@@ -43,7 +43,7 @@ const useMainSection = () => {
   };
 
   const getAllPostData = async () => {
-    const { data } = await getPostDetail('');
+    const { data } = await getAllPosts();
     data.sort(() => Math.random() - 0.5);
     setPostList({ id: 'all', posts: data });
   };
