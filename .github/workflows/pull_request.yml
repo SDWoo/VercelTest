@@ -14,11 +14,14 @@ jobs:
           touch vercel.json
           echo '
           {
-            "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }],
             "rewrites": [
               {
                 "source": "/api/:url*",
                 "destination": "${{ secrets.API_BASE_URL }}/:url*"
+              },
+              {
+                "source": "/[^.]+",
+                "destination": "/"
               }
             ]
           }
