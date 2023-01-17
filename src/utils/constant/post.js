@@ -10,7 +10,7 @@ export const POSTURL = {
   CHANNELS: '/channels',
   POSTS_IN_CHANNEL: '/posts/channel/',
   CREATE_POST: 'posts/create',
-  POST_DETAIL: '/posts/',
+  POST_DETAIL: '/posts',
   CREATE_COMMENTS: '/comments/create',
   CREATE_LIKES: '/likes/create',
   DELETE_LIKES: '/likes/delete',
